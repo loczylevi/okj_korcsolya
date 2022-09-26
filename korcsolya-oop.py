@@ -66,15 +66,6 @@ for sor in donto:
 print("7. feladat")
 statisztika = [print(f"        {orszag}: {db} versenyző") for orszag,db in stat.items() if db > 1]
     
-    
-def Pontok_alapjan():
-    kereso = [sor for sor in lista if sor.nev == bekeres]
-    if kereso:
-        pontszamok = [(sor.technika,sor.komponens,sor.hiba) for sor in kereso]
-        return (pontszamok[0][0] + pontszamok[0][1]) - pontszamok[0][2]
-    else:
-        return "        Ilyen nevű induló nem volt"
-    
 with open("vegeredmeny.csv","w",encoding="UTF-8") as f3:
     for sor in donto:
             jatekos = sor.nev_d
